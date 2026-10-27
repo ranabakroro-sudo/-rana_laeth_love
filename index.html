@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#251039">
+<title>محكمة الحب | رنا وليث 💜</title>
+<style>
+:root{--bg:#1b0b2b;--panel:#2a1440;--purple:#8f55bd;--gold:#ffd45f;--cream:#fff0ce;--pink:#ffb6df}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;min-height:100vh;background:radial-gradient(circle at 20% 10%,#52246c 0,transparent 34%),radial-gradient(circle at 90% 85%,#3a1b58 0,transparent 35%),var(--bg);font-family:Tahoma,Arial,sans-serif;color:#fff7ff;overflow-x:hidden}
+header{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:16px 6%;border-bottom:1px solid #ffd45f30;background:#1b0b2bcc;position:sticky;top:0;backdrop-filter:blur(10px);z-index:5}
+.brand{font-weight:bold;color:var(--gold)}.tools{display:flex;gap:8px}
+button{font:inherit;cursor:pointer;border:0;transition:.2s}button:hover{transform:translateY(-2px)}
+.mini{border:1px solid #ffd45f66;color:var(--gold);background:#ffffff08;border-radius:22px;padding:9px 13px}
+main{width:min(850px,92%);margin:0 auto}
+.screen{display:none;min-height:78vh;padding:55px 0;align-items:center;justify-content:center}.screen.active{display:flex}
+.box{width:100%;text-align:center;background:linear-gradient(145deg,#32184aee,#211032f2);border:1px solid #ffd45f55;border-radius:28px;padding:clamp(24px,5vw,48px);box-shadow:0 22px 70px #09031180;position:relative;overflow:hidden}
+.box:before{content:"✦";position:absolute;top:18px;left:22px;color:var(--gold);opacity:.6;font-size:26px}
+.emoji{font-size:3rem;filter:drop-shadow(0 0 15px #ffb6df55)}.eyebrow{color:var(--gold);letter-spacing:1px}
+h1{font-size:clamp(2.3rem,7vw,4.6rem);color:var(--gold);margin:14px 0;text-shadow:0 0 25px #ffd45f35}
+h2{color:var(--gold);font-size:clamp(1.5rem,4vw,2.3rem);margin:12px 0}
+p{font-size:1.06rem;line-height:2;color:#f4e8ff}
+.btn{padding:14px 23px;border-radius:28px;background:linear-gradient(110deg,#ffd45f,#fff0a8);color:#321543;font-weight:bold;box-shadow:0 8px 22px #ffd45f1c}
+.btn.purple{background:linear-gradient(110deg,#9b62c7,#70419b);color:white}
+.btn.ghost{background:#ffffff0b;border:1px solid #ffffff33;color:#fff}
+.actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:24px}
+.progress{height:6px;background:#ffffff16;border-radius:10px;margin:0 auto 24px;max-width:520px;overflow:hidden}
+.bar{height:100%;width:0;background:linear-gradient(90deg,var(--purple),var(--gold));transition:width .3s}
+.question-num{color:#d7b7ef;font-size:.9rem}
+.answers{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:620px;margin:24px auto 0}
+.answer{padding:16px;border-radius:17px;background:#ffffff0d;border:1px solid #ffd45f55;color:#fff;line-height:1.7}
+.answer:hover,.answer:focus{background:#ffd45f20;border-color:var(--gold)}
+.answer.chosen{background:#ffd45f;color:#2a123d}
+.note{font-size:.9rem;color:#d4b8e7}
+.paper{background:var(--cream);color:#42234f;border-radius:18px;padding:28px;text-align:right;box-shadow:0 12px 35px #09031155}
+.paper p{color:#42234f}.paper h2{color:#70418b;text-align:center}
+.hidden{display:none!important}
+.stamp{display:inline-block;color:var(--gold);border:2px solid var(--gold);padding:8px 17px;transform:rotate(-5deg);font-weight:bold;border-radius:8px;margin:12px}
+footer{text-align:center;padding:25px;color:#c8acd9;font-size:.85rem}
+.floating{position:fixed;bottom:-40px;pointer-events:none;z-index:9;animation:rise linear forwards}
+@keyframes rise{to{transform:translateY(-110vh) rotate(35deg);opacity:0}}
+@media(max-width:600px){header{padding:12px 4%}.answers{grid-template-columns:1fr}.screen{min-height:76vh;padding:32px 0}.box{padding:28px 19px}}
+</style>
+</head>
+<body>
+<header><div class="brand">⚖️ محكمة الحب · رنا & ليث</div><div class="tools"><button class="mini" id="music">♫ موسيقى</button><button class="mini" id="restart">↻ من الأول</button></div></header>
+<main>
+<section class="screen active" id="welcome"><div class="box">
+<div class="emoji">💜⚖️💛</div><div class="eyebrow">جلسة خاصة جدًا</div><h1>محكمة الحب</h1>
+<p>إلى السيد ليث…<br>تم استدعاؤك للمثول أمام محكمة رنا، بتهمة الاستحواذ على قلبها دون سابق إنذار! 😌</p>
+<p class="note">القضية بدأت في فبراير 2025… والحكم ممكن يكون مؤبّدًا من الحب.</p>
+<div class="actions"><button class="btn" onclick="go('case')">دخول المحكمة ♥</button></div>
+</div></section>
+
+<section class="screen" id="case"><div class="box">
+<div class="emoji">📜</div><h2>ملف القضية</h2>
+<p>اسم المتهم: <strong style="color:var(--gold)">ليث</strong><br>صاحبة الدعوى: <strong style="color:var(--pink)">رنا</strong><br>التهمة: سرقة القلب، والتسبب بالابتسامة عند تذكّره، والاحتلال اللطيف للأفكار طوال اليوم.</p>
+<p>تاريخ بداية الحكاية: <strong style="color:var(--gold)">فبراير / شباط 2025</strong></p>
+<div class="paper"><h2>📍 مكان ذكرى التعارف</h2><p>كل قصة إلها لحظة بداية ما بتنتسى… هون بدنا نحط موقف تعارف رنا وليث الحقيقي، بكل تفاصيله الحلوة.</p><p><strong>ملاحظة لرنا:</strong> ما وصلني وصف الموقف نفسه بعد، فتركت مكانه جاهز لحتى تضيفي شو صار وكيف بلّش الحكي بيناتكم.</p></div>
+<div class="actions"><button class="btn" onclick="go('quiz')">بدء الاستجواب 💗</button></div>
+</div></section>
+
+<section class="screen" id="quiz"><div class="box">
+<div class="question-num" id="qnum">السؤال 1 من 5</div><div class="progress"><div class="bar" id="bar"></div></div>
+<div class="emoji" id="qemoji">💌</div><h2 id="qtitle"></h2><p id="qdesc"></p>
+<div class="answers" id="answers"></div><p class="note" id="feedback" aria-live="polite"></p>
+<div class="actions"><button class="btn ghost hidden" id="next">السؤال التالي ←</button></div>
+</div></section>
+
+<section class="screen" id="verdict"><div class="box">
+<div class="emoji">🔨💛</div><div class="eyebrow">بعد سماع أقوال القلب…</div><h1 style="font-size:clamp(2rem,6vw,3.6rem)">الحكم النهائي</h1>
+<p>قررت محكمة رنا بالإجماع إدانة ليث بتهمة سرقة القلب، والحكم عليه بالبقاء في قلبها مدى الحياة، مع منحه جرعة غير محدودة من الحب والاهتمام والضحك سوا. 💜</p>
+<div class="stamp">الحكم: حب مؤبّد ♡</div>
+<div class="actions"><button class="btn" onclick="go('letter')">استلام الرسالة السرّية 💌</button></div>
+</div></section>
+
+<section class="screen" id="letter"><div class="box">
+<div class="emoji">💌</div><h2>رسالة من رنا إلى ليث</h2>
+<div class="paper"><p>ليث حبيبي،</p>
+<p>بحبك من كل قلبي، وبحب وجودك بحياتي وكل تفصيل حلو بيجمعنا. من يوم ما تعرفنا بشهر فبراير 2025، صار عندي ذكرى جديدة وغالية، وصار إلك مكان ما بيشبه حدا بقلبي.</p>
+<p>بتمنى أكون دايمًا حدّك، بفرحك قبل زعلك، وبأيامك السهلة والصعبة. وإذا مرق علينا شي مو سهل، نتذكر إننا فينا نحكي ونفهم بعض ونرجع نختار المحبة.</p>
+<p><strong>أنا بحبك ومعك على طول يا ليث… اليوم وبكرا، وبكل خطوة جاية، بتمنى نضل سند وفرحة وأمان لبعض. 💜💛</strong></p>
+<p style="text-align:left"><strong>إلك وبس، رنا ♡</strong></p></div>
+<div class="actions"><button class="btn" onclick="hearts();document.getElementById('finalMsg').classList.remove('hidden')">اضغط لتشوف المفاجأة ✨</button></div>
+<div id="finalMsg" class="hidden"><h2>رنا ♡ ليث</h2><p>حكايتنا بلّشت بفبراير 2025… ولسّا أجمل صفحاتها قدّامنا. ♾️</p><div class="emoji">💜💛💜💛💜</div></div>
+<div class="actions"><button class="btn purple" onclick="go('welcome')">إعادة التجربة ↻</button></div>
+</div></section>
+</main>
+<footer>مصمّم بحب لرنا وليث · فبراير 2025 💜</footer>
+<script>
+const qs=[
+ {e:'💌',t:'السؤال الأول: يا ليث، بتعترف إنك سرقت قلب رنا؟',d:'اختار جوابك بكل صراحة يا متهم 😌',a:['بعترف وبكل فخر 💜','أنا بريء… قلبي كمان انسرق 😂'],f:['تم تسجيل الاعتراف لصالح الحب!','المحكمة تعتبر هذا اعترافًا متبادلًا 😂']},
+ {e:'🗓️',t:'السؤال الثاني: بتتذكر متى بلّشت الحكاية؟',d:'تلميح صغير: شهر فبراير سنة 2025 💛',a:['فبراير 2025 أكيد!','نسيت… بس ما بنسى رنا 🥹'],f:['ذاكرة ممتازة يا ليث!','المهم إن رنا ما بتنتسى 💜']},
+ {e:'🌷',t:'السؤال الثالث: شو أهم شي بالعلاقة؟',d:'المحكمة عم تدوّن جوابك…',a:['الاهتمام والصدق','نضل نضحك ونحكي سوا'],f:['جواب يرفع الراس!','الضحكة سوا من أحلى الأدلة!']},
+ {e:'🤝',t:'السؤال الرابع: إذا صار يوم صعب، شو بتعمل؟',d:'الحب كمان موقف ووقفة جنب بعض.',a:['بحكي معها وبسمعها','بوقف حدّها وما بخليها لحالها'],f:['التفاهم أساس كل شي 💛','هذا هو السند الحقيقي 💜']},
+ {e:'♾️',t:'السؤال الخامس والأخير: جاهز للحكم؟',d:'آخر فرصة قبل ما القاضية رنا تعلن القرار!',a:['جاهز… احكمي يا رنا 👩‍⚖️','إذا الحكم حب، موافق من هلأ 💘'],f:['المحكمة تجهّز الحكم النهائي…','واضح إن المتهم مستسلم للحب!']}
+];
+let idx=0,selected=false;
+function go(id){document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));document.getElementById(id).classList.add('active');window.scrollTo({top:0,behavior:'smooth'});if(id==='quiz')renderQ();}
+function renderQ(){selected=false;const q=qs[idx];document.getElementById('qnum').textContent=`السؤال ${idx+1} من ${qs.length}`;document.getElementById('bar').style.width=`${idx/qs.length*100}%`;document.getElementById('qemoji').textContent=q.e;document.getElementById('qtitle').textContent=q.t;document.getElementById('qdesc').textContent=q.d;document.getElementById('feedback').textContent='';document.getElementById('next').classList.add('hidden');const area=document.getElementById('answers');area.innerHTML='';q.a.forEach((a,i)=>{let b=document.createElement('button');b.className='answer';b.textContent=a;b.onclick=()=>{if(selected)return;selected=true;b.classList.add('chosen');document.getElementById('feedback').textContent=q.f[i];document.getElementById('bar').style.width=`${(idx+1)/qs.length*100}%`;document.getElementById('next').classList.remove('hidden');document.getElementById('next').textContent=idx===qs.length-1?'إعلان الحكم ⚖️':'السؤال التالي ←';};area.appendChild(b);});}
+document.getElementById('next').onclick=()=>{if(idx<qs.length-1){idx++;renderQ()}else{go('verdict')}};
+document.getElementById('restart').onclick=()=>{idx=0;go('welcome')};
+function hearts(){for(let i=0;i<30;i++){const e=document.createElement('span');e.className='floating';e.textContent=['💜','💛','♥','✦'][Math.floor(Math.random()*4)];e.style.left=Math.random()*100+'vw';e.style.fontSize=(16+Math.random()*24)+'px';e.style.animationDuration=(2.2+Math.random()*2.5)+'s';document.body.appendChild(e);setTimeout(()=>e.remove(),5000)}}
+let ctx=null,timer=null,on=false,n=0;const notes=[392,440,523.25,440,349.23,392,440,523.25,493.88,440,392,329.63];
+document.getElementById('music').onclick=()=>{if(on){clearInterval(timer);on=false;document.getElementById('music').textContent='♫ موسيقى';return}ctx=ctx||new(window.AudioContext||window.webkitAudioContext)();ctx.resume();on=true;document.getElementById('music').textContent='♫ إيقاف';timer=setInterval(()=>{let o=ctx.createOscillator(),g=ctx.createGain();o.type='sine';o.frequency.value=notes[n++%notes.length];g.gain.setValueAtTime(.0001,ctx.currentTime);g.gain.exponentialRampToValueAtTime(.045,ctx.currentTime+.04);g.gain.exponentialRampToValueAtTime(.0001,ctx.currentTime+.35);o.connect(g);g.connect(ctx.destination);o.start();o.stop(ctx.currentTime+.37)},390)};
+</script>
+</body></html>
